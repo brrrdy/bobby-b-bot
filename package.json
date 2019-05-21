@@ -1,0 +1,14 @@
+{
+    "name": "bobby-b-bot",
+    "version": "0.0.1",
+    "description": "Enrich your discord server with the eternal wisdom of our favorite king.",
+    "main": "bobby.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Cody",
+    "license": "ISC",
+    "dependencies": {
+        "discord.js": "^11.5.0"
+    }
+}
