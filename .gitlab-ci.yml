@@ -1,7 +1,7 @@
 image: node:latest
 
 before_script:
-  - echo "$SSH_SERVER_HOSTKEYS" > ~/.ssh/known_hosts'
+  - echo "$SSH_SERVER_HOSTKEYS" > ~/.ssh/known_hosts
   - chmod 644 ~/.ssh/known_hosts
 
 
