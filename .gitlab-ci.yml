@@ -1,8 +1,13 @@
 image: node:latest
 
+before_script:
+  - echo "$SSH_SERVER_HOSTKEYS" > ~/.ssh/known_hosts'
+  - chmod 644 ~/.ssh/known_hosts
+
+
 stages:
   - build
-  - test
+  - deploy
 
 cache:
   paths:
@@ -16,7 +21,8 @@ install_dependencies:
     paths:
       - node_modules
 
-testing_testing:
-  stage: test
+deploy_bobby:
+  stage: deploy
   script:
-    - echo "Passed the tests, boss! /r/NotMyJob"
+    - ssh $DEPLOY_USER@$DEPLOY_HOST
+    - touch ideployed
